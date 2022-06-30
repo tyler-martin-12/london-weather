@@ -58,8 +58,8 @@ def response_to_df(response):
     return df
 
 def start_download():
-    start = pd.to_datetime('2015 01 01')
-    stop = pd.to_datetime('2022 06 26')
+    start = pd.to_datetime('2010 01 01')
+    stop = pd.to_datetime('2022 06 29')
     date_range = pd.date_range(start, stop)
 
     key=read_key()
