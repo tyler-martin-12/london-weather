@@ -22,6 +22,10 @@ def apply_mdates(ax, freq):
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%d %H"))
         ax.xaxis.set_major_locator(mdates.HourLocator(np.arange(0, 24)))
         ax.xaxis.set_minor_locator(mdates.HourLocator())
+    if freq == "hour_no_date":
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%H"))
+        ax.xaxis.set_major_locator(mdates.HourLocator(np.arange(0, 24)))
+        ax.xaxis.set_minor_locator(mdates.HourLocator())
     if freq == "day":
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
         ax.xaxis.set_major_locator(mdates.DayLocator())
